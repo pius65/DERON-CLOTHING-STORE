@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Deron Clothing">
+    <meta name="author" content="Deron Clothing">
+    <title>Women's Collection - Derob Clothing</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👕</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-tshirt text-2xl text-indigo-600 mr-2"></i>
+                <h1 class="text-xl font-bold">Deron Clothing</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-indigo-600 font-medium">Home</a></li>
+                    <li><a href="shop.html" class="text-indigo-600 font-medium">Shop</a></li>
+                    <li><a href="men.html" class="hover:text-indigo-600 font-medium">Men</a></li>
+                    <li><a href="contact.html" class="hover:text-indigo-600 font-medium">Contact</a></li>
+                    <li><a href="policies.html" class="hover:text-indigo-600 font-medium">Policies</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="shop.html" class="text-gray-700 hover:text-indigo-600"><i class="fas fa-search"></i></a>
+                <a href="shop.html" class="text-gray-700 hover:text-indigo-600"><i class="fas fa-shopping-bag"></i></a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Back Button -->
+    <div class="container mx-auto px-4 py-4">
+        <button onclick="window.location.href='index.html'" class="flex items-center text-indigo-600 hover:text-indigo-800">
+            <i class="fas fa-arrow-left mr-2"></i>
+            Back
+        </button>
+    </div>
+
+    <!-- Product Hero -->
+    <section class="bg-indigo-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Women's Denim Collection</h1>
+            <p class="text-xl">Stylish and affordable denim wear in Nairobi</p>
+        </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="py-8 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="item-count text-gray-600">Loading products...</span>
+                </div>
+                <div class="flex space-x-4">
+                    <select id="sortProducts" class="border rounded px-3 py-2 text-sm">
+                        <option value="default">Sort by</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Dungaree Trouser -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimtrousersderonclothing.png" 
+                         alt="Dungaree Trouser" 
+                         class="w-full h-64 object-cover mb-4 rounded"
+                         width="300" height="300">
+                    <h3 class="text-xl font-semibold">Dungaree Trouser</h3>
+                    <p class="text-gray-600 mb-2">Ksh 1200-1400</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Dungaree Trouser', 'Stylish denim dungarees for women', 'Ksh 1200-1400')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dungaree Shorts -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/dungareeshortsderonclothing.png" 
+                         alt="Dungaree Shorts" 
+                         class="w-full h-64 object-cover mb-4 rounded"
+                         width="300" height="300"
+                         onerror="this.src='/static/images/image-placeholder.png'">
+                    <h3 class="text-xl font-semibold">Dungaree Shorts</h3>
+                    <p class="text-gray-600 mb-2">Ksh 1000-1200</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Dungaree Shorts', 'Comfortable denim shorts', 'Ksh 1000-1200')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Denim Jumpsuit -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/Denim jumpsuit.webp" alt="Denim Jumpsuit" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Jumpsuit</h3>
+                    <p class="text-gray-600 mb-2">Ksh 1200-1400</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Jumpsuit', 'Stylish one-piece denim outfit', 'Ksh 1200-1400')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Thrift Jeans -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <div class="relative">
+                    <img src="../statics/images/ladiesthriftjeansderonclothing.png" alt="Ladies Thrift Jeans" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                        <span class="absolute top-2 right-2 bg-indigo-600 text-white text-xs px-2 py-1 rounded">New</span>
+                    </div>
+                    <h3 class="text-xl font-semibold">Ladies Thrift Jeans</h3>
+                    <p class="text-gray-600 mb-2">Ksh 850-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Ladies Thrift Jeans', 'Vintage-style denim jeans', 'Ksh 850-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Denim Trousers -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimtrousersderonclothing.png" alt="Denim Trousers" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Trousers</h3>
+                    <p class="text-gray-600 mb-2">Ksh 850-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Trousers', 'Classic denim pants for women', 'Ksh 850-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Denim Dress -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/dungareeeedress.png" alt="Denim Dress" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Dress</h3>
+                    <p class="text-gray-600 mb-2">Ksh 1000-1200</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Dress', 'Elegant denim dress', 'Ksh 1000-1200')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Denim Shorts -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimshortsladiesderonclothing.png" alt="Denim Shorts" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Shorts</h3>
+                    <p class="text-gray-600 mb-2">Ksh 800-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Shorts', 'Casual summer denim shorts', 'Ksh 800-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Denim Skirts -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimskirthighresolution.png" alt="Denim Skirts" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Skirts</h3>
+                    <p class="text-gray-600 mb-2">Ksh 600-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Skirts', 'Versatile denim skirts', 'Ksh 600-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Deron Clothing</h3>
+                    <p>Nairobi's favorite denim shop since 2023.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="shop.html" class="hover:text-indigo-400">Women's Collection</a></li>
+                        <li><a href="men.html" class="hover:text-indigo-400">Men's Collection</a></li>
+                        <li><a href="men.html" class="hover:text-indigo-400">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Help</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                        <li><a href="policies.html" class="hover:text-indigo-400">Shipping Policy</a></li>
+                        <li><a href="policies.html" class="hover:text-indigo-400">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/deron_clothing?igsh=MW05OTc2bDQwZTc2NQ==" class="text-white hover:text-indigo-400"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://www.facebook.com/share/1BJK5gieZ5/?mibextid=wwXIfr" class="text-white hover:text-indigo-400"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="https://www.tiktok.com/@deron_clothing?_t=ZM-8vCOsXFC2gJ&_r=1" class="text-white hover:text-indigo-400"><i class="fab fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 Deron Clothing</p>
+                <button onclick="window.open('https://www.instagram.com/pius_gatuyu_', '_blank')" 
+                        class="text-indigo-400 hover:text-indigo-300 hover:underline">
+                    designed by softwaremasters (PG)
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Product Details Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div class="bg-indigo-600 text-white p-4 rounded-t-lg">
+                <h2 class="text-xl font-bold">Deron Clothing</h2>
+            </div>
+            <div class="p-4">
+                <h3 id="modalProductName" class="text-lg font-semibold mb-2"></h3>
+                <p id="modalProductDesc" class="text-gray-600 mb-4"></p>
+                <p id="modalProductPrice" class="text-indigo-600 font-medium"></p>
+            </div>
+            <div class="flex justify-end p-4 border-t">
+                <button onclick="closeModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #productModal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
+    <script>
+        function showProductDetails(name, description, price) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductDesc').textContent = description;
+            document.getElementById('modalProductPrice').textContent = `Price: ${price}`;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Protection against right-click, copying and viewing source
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('Right-click is disabled');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable Ctrl+U (View source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('Viewing source is disabled');
+            }
+            // Disable Ctrl+Shift+I (DevTools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                alert('Developer tools are disabled');
+            }
+            // Disable Ctrl+C (Copy)
+            if (e.ctrlKey && e.key === 'c') {
+                e.preventDefault();
+                alert('Copying is disabled');
+            }
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

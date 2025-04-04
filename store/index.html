@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derob Clothing - Premium Denim Wear in Nairobi</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👕</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero {
+            background-image: url('https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-tshirt text-2xl text-indigo-600 mr-2"></i>
+                <h1 class="text-xl font-bold">Deron Clothing</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-indigo-600 font-medium">Home</a></li>
+                    <li><a href="shop.html" class="hover:text-indigo-600 font-medium">Shop</a></li>
+                    <li><a href="men.html" class="hover:text-indigo-600 font-medium">Men</a></li>
+                    <li><a href="contact.html" class="hover:text-indigo-600 font-medium">Contact</a></li>
+                    <li><a href="policies.html" class="hover:text-indigo-600 font-medium">Policies</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600" title="Home">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="shop.html" class="text-gray-700 hover:text-indigo-600"><i class="fas fa-search"></i></a>
+                <a href="shop.html" class="text-gray-700 hover:text-indigo-600"><i class="fas fa-shopping-bag"></i></a>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero h-96 md:h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Deron Clothing</h1>
+            <p class="text-xl md:text-2xl mb-8">Premium Denim Wear in Nairobi</p>
+            <a href="shop.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 inline-block transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Shop Now ladies <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+
+            <br>
+            <br>
+            <hr>
+            <br>
+            <br>
+
+            <a href="men.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 inline-block transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Shop Now men <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Women's Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/ladiesthriftjeansderonclothing.png" alt="Ladies Thrift Jeans" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Ladies Thrift Jeans</h3>
+                    <p class="text-gray-600 mb-2">Ksh 850-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Ladies Thrift Jeans', 'Vintage-style denim jeans', 'Ksh 850-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimtrousersderonclothing.png" alt="Denim Trousers" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Trousers</h3>
+                    <p class="text-gray-600 mb-2">Ksh 850-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Trousers', 'Classic denim pants for women', 'Ksh 850-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimdressgrokimage.jpg" alt="Denim Dress" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Dress</h3>
+                    <p class="text-gray-600 mb-2">Ksh 1000-1200</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Dress', 'Elegant denim dress', 'Ksh 1000-1200')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white p-4 rounded-lg shadow-md transition duration-300">
+                    <img src="../statics/images/denimshortsgrokk.jpg" alt="Denim Shorts" class="w-full h-64 object-cover mb-4 rounded" width="300" height="300">
+                    <h3 class="text-xl font-semibold">Denim Shorts</h3>
+                    <p class="text-gray-600 mb-2">Ksh 800-1000</p>
+                    <div class="mt-4">
+                        <button onclick="showProductDetails('Denim Shorts', 'Casual summer denim shorts', 'Ksh 800-1000')" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men's Coming Soon -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Men's Collection Coming Soon</h2>
+            <p class="text-xl text-gray-600 mb-8">Stay tuned for our new line of men's jeans and college jackets</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <picture>
+                        <source srcset="../statics/images/menbaggyjeans.png" type="image/png">
+                        <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg" 
+                             alt="Men's Jeans" 
+                             class="w-full h-64 object-cover rounded mb-4"
+                             width="300" height="300"
+                             loading="lazy">
+                    </picture>
+                    <h3 class="text-lg font-semibold">Men's Jeans</h3>
+                    <p class="text-gray-600">Coming Soon</p>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="../statics/images/collegeunisexmalefemale.png" type="image/png">
+                        <img src="https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg" 
+                             alt="College Jackets" 
+                             class="w-full h-64 object-cover rounded mb-4"
+                             width="300" height="300"
+                             loading="lazy">
+                    </picture>
+                    <h3 class="text-lg font-semibold">College Jackets</h3>
+                    <p class="text-gray-600">Coming Soon</p>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="../statics/images/malekakitrousers.png" type="image/png">
+                        <img src="https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg" 
+                             alt="Denim Shirts" 
+                             class="w-full h-64 object-cover rounded mb-4"
+                             width="300" height="300"
+                             loading="lazy">
+                    </picture>
+                    <h3 class="text-lg font-semibold">Denim Shirts</h3>
+                    <p class="text-gray-600">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Visit Our Store</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Desai Business Park</h3>
+                    <p class="text-gray-600 mb-4">QVXW+2H5, Nairobi, Kenya</p>
+                    <p class="mb-4">Open Monday to Saturday: 9AM - 6PM</p>
+                    <a href="contact.html" class="text-indigo-600 hover:underline font-medium">Get Directions →</a>
+                </div>
+                <div class="h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden relative">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.823456!2d36.82193391541539!3d-1.2913099999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMS4yNTE1NjQgTTYsIMKpwrYgwrY!5e0!3m2!1sen!2ske!4v1717894567" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="absolute bottom-4 right-4">
+                        <a href="https://www.google.com/maps/dir//Desai+Business+Park,+Nairobi" 
+                           target="_blank"
+                           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow flex items-center">
+                            <i class="fas fa-directions mr-2"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Deron Clothing</h3>
+                    <p>Nairobi's favorite denim shop since 2023.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="shop.html" class="hover:text-indigo-400">Women's Collection</a></li>
+                        <li><a href="men.html" class="hover:text-indigo-400">Men's Collection</a></li>
+                        <li><a href="men.html" class="hover:text-indigo-400">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Help</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                        <li><a href="policies.html" class="hover:text-indigo-400">Shipping Policy</a></li>
+                        <li><a href="policies.html" class="hover:text-indigo-400">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/deron_clothing?igsh=MW05OTc2bDQwZTc2NQ==" class="text-white hover:text-indigo-400"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://www.facebook.com/share/1BJK5gieZ5/?mibextid=wwXIfr" class="text-white hover:text-indigo-400"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="https://www.tiktok.com/@deron_clothing?_t=ZM-8vCOsXFC2gJ&_r=1" class="text-white hover:text-indigo-400"><i class="fab fa-tiktok text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2025 Deron Clothing</p>
+                <button onclick="window.open('https://www.instagram.com/pius_gatuyu_.?igsh=MXU3Zzh5eHIzajFn', '_blank')" 
+                        class="text-indigo-400 hover:text-indigo-300 hover:underline">
+                    designed by softwaremasters (PG) <i class="fab fa-instagram ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Product Details Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div class="bg-indigo-600 text-white p-4 rounded-t-lg">
+                <h2 class="text-xl font-bold">Deron Clothing</h2>
+            </div>
+            <div class="p-4">
+                <h3 id="modalProductName" class="text-lg font-semibold mb-2"></h3>
+                <p id="modalProductDesc" class="text-gray-600 mb-4"></p>
+                <p id="modalProductPrice" class="text-indigo-600 font-medium"></p>
+            </div>
+            <div class="flex justify-end p-4 border-t">
+                <button onclick="closeModal()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #productModal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
+    <script>
+        function showProductDetails(name, description, price) {
+            document.getElementById('modalProductName').textContent = name;
+            document.getElementById('modalProductDesc').textContent = description;
+            document.getElementById('modalProductPrice').textContent = `Price: ${price}`;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Protection against right-click, copying and viewing source
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('Right-click is disabled');
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable Ctrl+U (View source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('Viewing source is disabled');
+            }
+            // Disable Ctrl+Shift+I (DevTools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                alert('Developer tools are disabled');
+            }
+            // Disable Ctrl+C (Copy)
+            if (e.ctrlKey && e.key === 'c') {
+                e.preventDefault();
+                alert('Copying is disabled');
+            }
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
